@@ -12,6 +12,6 @@
 - (instancetype)initWithURL:(NSURL*)URL;
 - (instancetype)initWithURLRequest:(NSURLRequest *)request;
 
-@property (nonatomic, weak) id<UIWebViewDelegate> delegate;
+@property (nonatomic, weak) id<UIWebViewDelegate> webViewDelegate;
 
 @end

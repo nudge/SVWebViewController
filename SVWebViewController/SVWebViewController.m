@@ -222,8 +222,8 @@
     
     [self updateToolbarItems];
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
-        [self.delegate webViewDidStartLoad:webView];
+    if (self.webViewDelegate && [self.webViewDelegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
+        [self.webViewDelegate webViewDidStartLoad:webView];
     }
 }
 
@@ -237,8 +237,8 @@
     
     [self updateToolbarItems];
     
-    if (self.delegate && [delegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
-        [self.delegate webViewDidFinishLoad:webView];
+    if (self.webViewDelegate && [self.webViewDelegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
+        [self.webViewDelegate webViewDidFinishLoad:webView];
     }
 }
 
@@ -246,8 +246,8 @@
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self updateToolbarItems];
     
-    if (self.delegate && [delegate respondsToSelector:@selector(webView:didFailLoadWithError:)]) {
-        [self.delegate webView:webView didFailLoadWithError:error];
+    if (self.webViewDelegate && [self.webViewDelegate respondsToSelector:@selector(webView:didFailLoadWithError:)]) {
+        [self.webViewDelegate webView:webView didFailLoadWithError:error];
     }
     
 }
