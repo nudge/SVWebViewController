@@ -16,4 +16,6 @@
 
 @property (nonatomic, strong) UIColor *barsTintColor;
 
+@property (nonatomic, weak) id<UIWebViewDelegate> delegate;
+
 @end
